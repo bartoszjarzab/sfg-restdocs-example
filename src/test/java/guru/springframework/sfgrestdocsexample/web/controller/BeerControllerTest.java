@@ -21,6 +21,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
+import java.time.OffsetDateTime;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -66,10 +67,10 @@ class BeerControllerTest {
                                 parameterWithName("iscold").description("Is Beer Cold Query Param")
                         ),
                         responseFields(
-                                fieldWithPath("id").description("Id of Beer"),
+                                fieldWithPath("id").description("Id of Beer").type(UUID.class),
                                 fieldWithPath("version").description("Version of Beer"),
-                                fieldWithPath("createdDate").description("Created Date of Beer"),
-                                fieldWithPath("lastModifiedDate").description("Last Modified Date of Beer"),
+                                fieldWithPath("createdDate").description("Created Date of Beer").type(OffsetDateTime.class),
+                                fieldWithPath("lastModifiedDate").description("Last Modified Date of Beer").type(OffsetDateTime.class),
                                 fieldWithPath("beerName").description("Name of Beer"),
                                 fieldWithPath("beerStyle").description("Style of Beer"),
                                 fieldWithPath("upc").description("Upc of Beer"),

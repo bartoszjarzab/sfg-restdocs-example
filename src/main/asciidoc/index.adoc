@@ -1,5 +1,5 @@
 = Spring REST Docs JUnit 5 Sample
-Andy Wilkinson;
+John Doe;
 :doctype: book
 :icons: font
 :source-highlighter: highlightjs
